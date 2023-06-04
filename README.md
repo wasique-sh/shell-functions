@@ -30,15 +30,12 @@ It supports the following programming languages (so far)
 ## Installation
 ```sh
 git clone https://github.com/wasique-sh/shell-functions.git
-```
-Session-Only
-```sh
-source shell-functions/*.func
-```
 
-Permanent
-```sh
-echo "source shell-functions/*.func" >> ~/.bashrc
+# Session-Only
+source shell-functions/*.func
+
+# Permanent
+#echo "source $(pwd)/shell-functions/*.func" >> ~/.bashrc
 ```
 
 ## Usage
