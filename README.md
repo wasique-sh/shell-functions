@@ -9,7 +9,7 @@ A repository containing all of my shell functions
 
 ## About
 ### **run.func**
-[`run.func`](https://github.com/wasique-sh/shell-functions/blob/master/run.func) is a posix shell function which simplifies running any program code using a single command.
+[`run.func`](https://github.com/wasique-sh/shell-functions/blob/main/run.func) is a posix shell function which simplifies running any program code using a single command.
 
 It supports the following programming languages (so far)
 - C
