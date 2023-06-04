@@ -8,7 +8,7 @@ run() {
         _file_extension="${1##*.}"
         _file_basename="${1%.*}"
 
-        case "${1##*.}" in
+        case "$_file_extension" in
         "txt" | "md")
             /usr/bin/cat "$1"
             ;;
