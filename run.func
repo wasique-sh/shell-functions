@@ -1,0 +1,39 @@
+#!/bin/sh
+
+run() {
+    if [ $# -eq 0 ]; then
+        /usr/bin/echo "Error: No file provided."
+        /usr/bin/echo "Usage: run <path/to/file>"
+    else
+        _file_extension="${1##*.}"
+        _file_basename="${1%.*}"
+
+        case "${1##*.}" in
+        "txt" | "md")
+            /usr/bin/cat "$1"
+            ;;
+        "c")
+            /usr/bin/gcc -o "/tmp/run.func.exec" "$1" && "/tmp/run.func.exec"
+            ;;
+        "java")
+            /usr/bin/javac -d "/tmp/run.func" "$1" && /usr/bin/java -cp "/tmp/run.func/" "$_file_basename"
+            ;;
+        "py")
+            /usr/bin/python "$1"
+            ;;
+        "rs")
+            /usr/bin/rustc -o "/tmp/run.func.exec" "$1" && "/tmp/run.func.exec"
+            ;;
+        "sh")
+            /usr/bin/sh "$1"
+            ;;
+        *)
+            /usr/bin/echo "Unsupported file extension: $_file_extension"
+            ;;
+        esac
+
+        [ -d "/tmp/run.func" ] && /usr/bin/rm -rf "/tmp/run.func"
+        [ -f "/tmp/run.func.exec" ] && /usr/bin/rm "/tmp/run.func.exec"
+    fi
+}
+
