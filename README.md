@@ -1,5 +1,6 @@
 # Shell Functions
-A repository containing all of my shell functions
+A repository containing all of my (posix) shell functions. Intended for Linux but should work on any Unix-like operating system (such as macOS, BSD) and environments (like WSL).
+
 
 ## Table of Contents
 - [About](#about)
@@ -7,9 +8,10 @@ A repository containing all of my shell functions
 - [Installation](#installation)
 - [Usage](#usage)
 
+
 ## About
 ### **run.func**
-[`run.func`](https://github.com/wasique-sh/shell-functions/blob/main/run.func) is a posix shell function which simplifies running any program code using a single command.
+[`run.func`](https://github.com/wasique-sh/shell-functions/blob/main/run.func) simplifies running any program code using a single command. It is specifically designed for executing simple programs and an ideal learning tool for individuals who are new to coding.
 
 It supports the following programming languages (so far)
 - C
@@ -18,14 +20,13 @@ It supports the following programming languages (so far)
 - Rust
 - Shell
 
-## Dependencies
-- GNU Core Utilities
-- Bash
 
+## Dependencies
 ### **run.func**
-- Python
-- Java
-- Rust
+- [Python](https://www.python.org/)
+- [Java](https://openjdk.java.net/)
+- [Rust](https://www.rust-lang.org/)
+
 
 ## Installation
 ```sh
@@ -41,5 +42,5 @@ source shell-functions/*.func
 ## Usage
 ### **run.func**
 ```sh
-run <file/to/file>
+run <path/to/file>
 ```
