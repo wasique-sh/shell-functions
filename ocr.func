@@ -1,0 +1,7 @@
+#!/bin/sh
+
+ocr() {
+    /usr/bin/xclip -selection clipboard -t image/png -o >/tmp/tesseract.png
+    /usr/bin/tesseract /tmp/tesseract.png - | /usr/bin/xclip -selection clipboard
+    /usr/bin/rm /tmp/tesseract.png
+}
